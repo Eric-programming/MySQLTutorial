@@ -12,4 +12,4 @@ CREATE INDEX i_emp ON employees(gender);
 
 #Drop Index
 ALTER TABLE employees
-DROP INDEX i_emp;
+DROP INDEX i_emp;	
