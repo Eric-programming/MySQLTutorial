@@ -13,14 +13,3 @@ CREATE INDEX i_emp ON employees(gender);
 #Drop Index
 ALTER TABLE employees
 DROP INDEX i_emp;
-
-
-/**
-Example:
-Select all records from the ‘salaries’ table of people whose salary is higher than $100,000
-
-Then, create an index on the ‘i_salary’ column of that table, and check if it has speed up the search of the same SELECT statement.
-**/
-
-SELECT salary FROM salaries WHERE salary > 100000;
-CREATE INDEX i_salary ON salaries(salary);

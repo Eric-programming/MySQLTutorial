@@ -1,3 +1,6 @@
+/**
+Subquery is nested query
+**/
 SELECT * FROM dept_manager;
 
 SELECT * FROM employees;
@@ -15,7 +18,7 @@ WHERE emp_no IN (SELECT emp_no  FROM dept_manager);
 
 #Solution 3 (EXISTS)
 SELECT * FROM employees t1
-WHERE EXISTS (SELECT emp_no FROM dept_manager t2 WHERE t1.emp_no = t2.dept_manager);
+WHERE EXISTS (SELECT emp_no FROM dept_manager t2 WHERE t1.emp_no = t2.emp_no);
 
 #We use IN when the datasets are small and we use EXISTS when the datasets is large because it is faster
 

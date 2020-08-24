@@ -26,15 +26,14 @@ SET to_date = NULL WHERE to_date = "9999-01-01";
 
 SELECT * FROM tempDept_emp;
 ##############################################
-#JOIN will join two or more tables together if there is a related columns that contains the same type of data
-
+#JOIN will join two or more tables together if there is a related columns that contains the matching values
 #Inner Join Clause Or Join Clauses
 SELECT * FROM tempDept_emp AS table1
-INNER JOIN departments AS table2 ON table1.dept_no = table2.dept_no; #Condition order doesn't matter
+INNER JOIN departments AS table2 ON table2.dept_no = table1.dept_no ; #Condition order doesn't matter
 
 #Left Join (Join matching values + all values from left table match  all values + no value from right table)
 SELECT * FROM  departments AS table1
-LEFT JOIN tempDept_emp AS table2 ON table1.dept_no = table2.dept_no; #Condition order doesn't matter
+LEFT JOIN tempDept_emp AS table2 ON table2.dept_no = table1.dept_no; #Condition order doesn't matter
 
 SELECT * FROM tempDept_emp AS table1
 LEFT JOIN departments AS table2 ON table1.dept_no = table2.dept_no; #Condition order doesn't matter

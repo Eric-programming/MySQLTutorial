@@ -10,6 +10,8 @@ USE employees $$
 CREATE PROCEDURE select_all_employees()
 BEGIN
 	SELECT * FROM employees;
+    
+    
 END$$
 DELIMITER ;
 
@@ -36,7 +38,7 @@ BEGIN
 END$$
 DELIMITER ;
 
-CALL employees.select_employees_salary(100000);
+CALL employees.select_employees_salary(80000);
 
 #Step 4: Parameter In and Out
 DELIMITER $$
@@ -54,8 +56,7 @@ SELECT @average_salary;
 
 
 #Clean up
-DROP procedure IF EXISTS select_top_employees_salary;
-DROP procedure IF EXISTS select_all_employees;
-DROP procedure IF EXISTS select_limited_employees;
-DROP procedure IF EXISTS select_employees_salary;
-DROP procedure IF EXISTS select_avg_salary;
+DROP procedure select_all_employees;
+DROP procedure select_limited_employees;
+DROP procedure select_employees_salary;
+DROP procedure select_avg_salary;

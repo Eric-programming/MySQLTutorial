@@ -12,7 +12,7 @@ INSERT INTO new_employees
 SELECT * FROM employees WHERE birth_date BETWEEN "1952-02-17" AND "1952-02-18";
 
 
-SELECT * FROM new_employees ORDER BY birth_date;
+SELECT * FROM new_employees;
 
 DROP TABLE new_employees;
 

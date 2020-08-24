@@ -31,7 +31,8 @@ SELECT * FROM employees_dup;
 SELECT dept_name AS all_names FROM departments
 UNION
 SELECT first_name from employees_dup;
-
+	
+#Return dup as well
 SELECT dept_name AS all_names FROM departments
 UNION ALL
 SELECT first_name from employees_dup;

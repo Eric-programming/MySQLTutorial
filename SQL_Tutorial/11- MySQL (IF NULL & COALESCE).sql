@@ -1,4 +1,9 @@
 #IF NULL & COALESCE
+
+/**
+returns the first non-null value in the conditions.
+IFNULL only takes 2 arguments but coalesce can take more than 2 arguments
+**/
 #Change######################################### 
 SELECT * FROM salaries;
 
